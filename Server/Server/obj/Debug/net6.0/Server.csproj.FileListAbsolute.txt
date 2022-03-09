@@ -1,0 +1,17 @@
+D:\Networks\Server\Server\bin\Debug\net6.0\Server.exe
+D:\Networks\Server\Server\bin\Debug\net6.0\Server.deps.json
+D:\Networks\Server\Server\bin\Debug\net6.0\Server.runtimeconfig.json
+D:\Networks\Server\Server\bin\Debug\net6.0\Server.dll
+D:\Networks\Server\Server\bin\Debug\net6.0\Server.pdb
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.csproj.AssemblyReference.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.AssemblyInfoInputs.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.AssemblyInfo.cs
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.csproj.CoreCompileInputs.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.dll
+D:\Networks\Server\Server\obj\Debug\net6.0\refint\Server.dll
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.pdb
+D:\Networks\Server\Server\obj\Debug\net6.0\Server.genruntimeconfig.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\ref\Server.dll
+D:\Networks\Server\Server\bin\Debug\net6.0\Beans
+D:\Networks\Server\Server\bin\Debug\net6.0\Test.html

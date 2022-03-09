@@ -1,0 +1,17 @@
+D:\Networks\Server\Server\bin\Debug\net6.0\HTTPServer.exe
+D:\Networks\Server\Server\bin\Debug\net6.0\Beans
+D:\Networks\Server\Server\bin\Debug\net6.0\Test.html
+D:\Networks\Server\Server\bin\Debug\net6.0\HTTPServer.deps.json
+D:\Networks\Server\Server\bin\Debug\net6.0\HTTPServer.runtimeconfig.json
+D:\Networks\Server\Server\bin\Debug\net6.0\HTTPServer.dll
+D:\Networks\Server\Server\bin\Debug\net6.0\HTTPServer.pdb
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.csproj.AssemblyReference.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.AssemblyInfoInputs.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.AssemblyInfo.cs
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.csproj.CoreCompileInputs.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.dll
+D:\Networks\Server\Server\obj\Debug\net6.0\refint\HTTPServer.dll
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.pdb
+D:\Networks\Server\Server\obj\Debug\net6.0\HTTPServer.genruntimeconfig.cache
+D:\Networks\Server\Server\obj\Debug\net6.0\ref\HTTPServer.dll
