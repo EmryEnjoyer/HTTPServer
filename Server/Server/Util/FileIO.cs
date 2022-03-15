@@ -21,7 +21,7 @@ namespace Server.Util
                 f.Read(buffer, 0, buffer.Length);
                 f.Flush();
                 f.Close();
-            } catch (FileNotFoundException ex)
+            } catch (Exception ex)
             {
                 buffer = new byte[0];
                 response = 404;

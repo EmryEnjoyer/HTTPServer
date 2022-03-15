@@ -1,6 +1,7 @@
 ﻿using Server.Util;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 
 // This class by Justice Roberts for IT3313
 // Credit for archetype goes to MSDN developers
@@ -12,7 +13,9 @@ namespace Server.Models
     {
         public int Port { get; set; }
         public IPAddress Address { get; set; }
-        public static ManualResetEvent allDone = new ManualResetEvent(false);
+        public static ManualResetEvent connectDone = new ManualResetEvent(false);
+        public static ManualResetEvent receiveDone = new ManualResetEvent(false);
+        public static ManualResetEvent sendDone = new ManualResetEvent(false);
         public HTTPServer(int port, string address)
         {
             Port = port;
@@ -39,12 +42,13 @@ namespace Server.Models
 
                 while (true)
                 {
-                    allDone.Reset();
+                    connectDone.Reset();
+                    receiveDone.Reset();
                     Console.WriteLine("Listening...");
                     listener.BeginAccept(
                         new AsyncCallback(onAccept),
                         listener);
-                    allDone.WaitOne();
+                    connectDone.WaitOne();
                 }
             } catch (Exception ex)
             {
@@ -53,17 +57,49 @@ namespace Server.Models
         }
         public void onAccept(IAsyncResult ar)
         {
-            allDone.Set();
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+            connectDone.Set();
 
             Socket listener = (Socket)ar.AsyncState;
             Socket handler = listener.EndAccept(ar);
-            byte[] data = FileIO.BuildResponse("Test");
-
+            byte[] request = Receive(handler);
+            receiveDone.WaitOne();
+            string req = "";
+            if (request[0] != 0)
+            {
+                req = Encoding.ASCII.GetString(request, 0, request.Length).Split(" ")[1];
+            }
+            byte[] data;
+            if (req.Length > 0)
+            {
+                data = FileIO.BuildResponse(req.Substring(1));
+            } else
+            {
+                data = FileIO.BuildResponse("missing");
+            }
             Send(data, handler);
+            sendDone.WaitOne();
+            handler.Shutdown(SocketShutdown.Both);
+            handler.Close();
         }
-        public async Task<Socket> ReceiveAsync()
+        public byte[] Receive(Socket socket)
         {
-            throw new NotImplementedException();
+            byte [] data = new byte[2048];
+            socket.BeginReceive(data, 0, 2048, SocketFlags.None, ReceiveCallback, socket);
+            return data;
+        }
+
+        public void ReceiveCallback(IAsyncResult ar)
+        {
+            try
+            {
+                Socket handler = (Socket)ar.AsyncState;    
+                handler.EndReceive(ar);
+                receiveDone.Set();
+            } catch (ObjectDisposedException ex)
+            {
+                receiveDone.Set();
+            }
         }
 
         public void Send(byte[] data, Socket socket)
@@ -77,8 +113,7 @@ namespace Server.Models
             {
                 Socket handler = (Socket)ar.AsyncState;
                 handler.EndSend(ar);
-                handler.Shutdown(SocketShutdown.Both);
-                handler.Close();
+                sendDone.Set();
             } catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());

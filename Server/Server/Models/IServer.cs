@@ -10,7 +10,7 @@ namespace Server.Models
         public void Open();
         public void onAccept(IAsyncResult ar);
         public void Close();
-        public Task<Socket> ReceiveAsync();
+        public byte[] Receive(Socket socket);
         public void Send(byte[] data, Socket socket);
         public Task<Socket> BroadcastAsync();
     }
