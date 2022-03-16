@@ -21,16 +21,9 @@ namespace Server.Models
             Port = port;
             Address = IPAddress.Parse(address);
         }
-        public async Task<Socket> BroadcastAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Close()
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// Opens the socket created in the constructor
+        /// </summary>
         public void Open()
         {
             var listener = new Socket(Address.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
@@ -46,7 +39,7 @@ namespace Server.Models
                     receiveDone.Reset();
                     Console.WriteLine("Listening...");
                     listener.BeginAccept(
-                        new AsyncCallback(onAccept),
+                        new AsyncCallback(onAcceptCallback),
                         listener);
                     connectDone.WaitOne();
                 }
@@ -55,7 +48,11 @@ namespace Server.Models
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void onAccept(IAsyncResult ar)
+        /// <summary>
+        /// Handles accepted connection asynchronously
+        /// </summary>
+        /// <param name="ar"></param>
+        private void onAcceptCallback(IAsyncResult ar)
         {
             Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
             connectDone.Set();
@@ -82,14 +79,22 @@ namespace Server.Models
             handler.Shutdown(SocketShutdown.Both);
             handler.Close();
         }
+        /// <summary>
+        /// Accepts request from socket
+        /// </summary>
+        /// <param name="socket"></param>
+        /// <returns>a byte array containing the received data</returns>
         public byte[] Receive(Socket socket)
         {
             byte [] data = new byte[2048];
             socket.BeginReceive(data, 0, 2048, SocketFlags.None, ReceiveCallback, socket);
             return data;
         }
-
-        public void ReceiveCallback(IAsyncResult ar)
+        /// <summary>
+        /// Handle received data asynchronously
+        /// </summary>
+        /// <param name="ar"></param>
+        private void ReceiveCallback(IAsyncResult ar)
         {
             try
             {
@@ -101,13 +106,21 @@ namespace Server.Models
                 receiveDone.Set();
             }
         }
-
+        /// <summary>
+        /// Sends data through socket.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="socket"></param>
         public void Send(byte[] data, Socket socket)
         {
             socket.BeginSend(data,0,data.Length,SocketFlags.None, 
                 new AsyncCallback(SendCallback), socket);
         }
-        public void SendCallback(IAsyncResult ar)
+        /// <summary>
+        /// Handles the sending of data asynchronously
+        /// </summary>
+        /// <param name="ar"></param>
+        private void SendCallback(IAsyncResult ar)
         {
             try
             {

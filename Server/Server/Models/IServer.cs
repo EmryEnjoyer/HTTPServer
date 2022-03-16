@@ -8,10 +8,7 @@ namespace Server.Models
         public int Port { get; set; }
         public IPAddress Address { get; set; }
         public void Open();
-        public void onAccept(IAsyncResult ar);
-        public void Close();
         public byte[] Receive(Socket socket);
         public void Send(byte[] data, Socket socket);
-        public Task<Socket> BroadcastAsync();
     }
 }

@@ -1,0 +1,15 @@
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\bin\Debug\net6.0\HTTPClient.exe
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\bin\Debug\net6.0\HTTPClient.deps.json
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\bin\Debug\net6.0\HTTPClient.runtimeconfig.json
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\bin\Debug\net6.0\HTTPClient.dll
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\bin\Debug\net6.0\HTTPClient.pdb
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.csproj.AssemblyReference.cache
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.AssemblyInfoInputs.cache
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.AssemblyInfo.cs
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.csproj.CoreCompileInputs.cache
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.dll
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\refint\HTTPClient.dll
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.pdb
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\HTTPClient.genruntimeconfig.cache
+D:\git workspaces\HTTPServer\HTTPClient\HTTPClient\obj\Debug\net6.0\ref\HTTPClient.dll

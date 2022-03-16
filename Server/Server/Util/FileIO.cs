@@ -8,6 +8,8 @@ namespace Server.Util
 {
     public class FileIO
     {
+        /// <param name="path">Path of the file</param>
+        /// <returns>a byte array containing the contents of the header concatenated with the message</returns>
         public static byte[] BuildResponse(string path) 
         {
             var response = 200;                                     // Keep track of response through 
@@ -40,7 +42,9 @@ namespace Server.Util
 
             return msg;
         }
-        public static byte[] BuildHeaders(int responseCode)
+        /// <param name="responseCode">Code returned by the website following RFC conventions</param>
+        /// <returns>byte array containing the headers</returns>
+        private static byte[] BuildHeaders(int responseCode)
         {
             var msg = "";
             if(responseCode == 404)

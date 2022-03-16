@@ -3842,11 +3842,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Networks\\Server\\TestServer\\TestServer.csproj",
+      "projectUniqueName": "D:\\git workspaces\\HTTPServer\\Server\\TestServer\\TestServer.csproj",
       "projectName": "TestServer",
-      "projectPath": "D:\\Networks\\Server\\TestServer\\TestServer.csproj",
+      "projectPath": "D:\\git workspaces\\HTTPServer\\Server\\TestServer\\TestServer.csproj",
       "packagesPath": "C:\\Users\\Daphne\\.nuget\\packages\\",
-      "outputPath": "D:\\Networks\\Server\\TestServer\\obj\\",
+      "outputPath": "D:\\git workspaces\\HTTPServer\\Server\\TestServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3866,8 +3866,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Networks\\Server\\Server\\Server.csproj": {
-              "projectPath": "D:\\Networks\\Server\\Server\\Server.csproj"
+            "D:\\git workspaces\\HTTPServer\\Server\\Server\\Server.csproj": {
+              "projectPath": "D:\\git workspaces\\HTTPServer\\Server\\Server\\Server.csproj"
             }
           }
         }

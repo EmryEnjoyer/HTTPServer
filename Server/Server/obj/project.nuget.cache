@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q7+LmEoAdER+wfkYEnQjsjtqvoDWkjn0ynCHSvBluFjdXfVRqjkkk7xdvrFVlawl8Bs6WqgeCyX+8t5EorYeow==",
+  "dgSpecHash": "5VmpDnfumidLvl3jdOW3/KL+UhqSN0xSSrGl/P80asVWw0CmsLbmuVc9kxEac9xIFk8kdzGy8m4gEyfJWyaiqQ==",
   "success": true,
-  "projectFilePath": "D:\\Networks\\Server\\Server\\Server.csproj",
+  "projectFilePath": "D:\\git workspaces\\HTTPServer\\Server\\Server\\Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

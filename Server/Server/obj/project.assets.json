@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Networks\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "D:\\git workspaces\\HTTPServer\\Server\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\Networks\\Server\\Server\\Server.csproj",
+      "projectPath": "D:\\git workspaces\\HTTPServer\\Server\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\Daphne\\.nuget\\packages\\",
-      "outputPath": "D:\\Networks\\Server\\Server\\obj\\",
+      "outputPath": "D:\\git workspaces\\HTTPServer\\Server\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
